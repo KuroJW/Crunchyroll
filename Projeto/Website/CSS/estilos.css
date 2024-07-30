@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root 
+{
+    --header-background-color: #23252B;
+    --background-color: #000000;
+    --background-color-login: #141519;
+    --text--color: #ffffff;
+    --fonte--titulo: "Roboto", sans-serif;
+}
+body 
+{
+    background-color: var(--background-color);
+}
+
+.logo 
+{
+    display: flex;
+    justify-content: center;
+    background-color: var(--header-background-color);
+    padding: 15px;
+}
+
+.login_h {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px ;
+    font-family: var(--fonte--titulo);
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--text--color);
+}
+
+.login 
+{
+    display: flex;
+    justify-content: center;
+    padding: 10px 500px 0px 0px;
+}
+
+.entrar 
+{
+    padding: 10px 0px 0px 100px;
+    background-color: var(--background-color-login);
+    width: 100px;  /* Largura relativa ao contêiner pai */
+    height: 25px;
+    
+}
+
+.entrar_login {
+    display: flex;
+}
+
+
+
