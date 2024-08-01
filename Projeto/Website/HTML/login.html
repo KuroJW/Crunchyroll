@@ -17,12 +17,20 @@
 
         <h1 class="login_h">Login</h1>
         <div class="login">
+            
+            <div class="container">
 
-            <img class="hime" src="../../Website/Recursos/Imagem/log-in-hime.png.svg" alt="Hime">
-            <div class="entrar">
-                <form name="" action="../../PHP/login.php">
+                <img class="background_login" src="../../Website/Recursos/Imagem/Background.svg" alt="Hime">
+                <form name="formulario_login" method="get" action="../../PHP/login.php">
+                    
+                    <div class="content">
+                        
+                        <input placeholder="Usuário" type="text" name="campo_login"  class="entrar_login" maxlength="60">
+    
+                        <input placeholder="Senha" type="password" name="campo_senha"  class="entrar_senha" max="30">
 
-                <input name="campo_login" type="text" class="entrar_login">
+                    </div>
+                    
 
                 </form>
             </div>
