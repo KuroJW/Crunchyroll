@@ -15,26 +15,29 @@
     </header>
     <section>
 
-        <h1 class="login_h">Login</h1>
+        <h1 class="login_h">Início de sessão</h1>
         <div class="login">
             
             <div class="container">
 
                 <img class="background_login" src="../../Website/Recursos/Imagem/Background.svg" alt="Hime">
-                <form name="formulario_login" method="get" action="../../PHP/login.php">
-                    
-                    <div class="content">
-                        
-                        <input placeholder="Usuário" type="text" name="campo_login"  class="entrar_login" maxlength="60">
-    
-                        <input placeholder="Senha" type="password" name="campo_senha"  class="entrar_senha" max="30">
-
-                    </div>
-                    
-
-                </form>
+                
             </div>
+            <form method="POST" action="../../PHP/login.php">
+                    
+                <div class="content">
+                    
+                    <input placeholder="Usuário" type="text" name="LOGIN"  class="entrar_login" maxlength="60">
 
+                    <input placeholder="Senha" type="password" name="SENHA"  class="entrar_senha" max="30">
+
+                    <p>
+                        <button type="submit">Entrar</button>
+                    </p>
+
+                </div>
+                
+            </form>
         </div>
 
     </section>

@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root 
 {
     --header-background-color: #23252B;
     --background-color: #000000;
     --background-color-login: #141519;
     --text-color: #ffffff;
+    --fonte--principal: 'Rubik', sans-serif;
 }
 body 
 {
@@ -22,7 +25,11 @@ body
 {
     display: flex;
     justify-content: center;
+    margin-top: 150px;
     color: var(--text-color);
+    font-family: var(--fonte--principal);
+    font-weight: 300;
+    font-size: 30px;
 }
 
 .login 
@@ -41,13 +48,20 @@ body
 
 .background_login
 {   
-    margin-top: 200px;
-    z-index: 1; /* Garante que a imagem fique atrás dos inputs */
+    position:absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Garante que a imagem fique atrás dos inputs */
 }
 
 .content 
-{
+{   
+    position: absolute;
     display: flex;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     flex-direction: column;
     gap: 40px; /* Espaçamento entre os inputs */
     z-index: 1;

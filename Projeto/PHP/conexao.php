@@ -1,20 +1,32 @@
 <?php
-// Defina as variáveis para a conexão
-$host = 'localhost'; // ou o endereço do servidor do banco de dados
-$usuario = 'root';
-$senha = '';
-$database = 'dbwadley';
+class Database {
+    private $host = 'localhost'; // ou o endereço do seu servidor de banco de dados
+    private $db_name = 'dbwadley';
+    private $username = 'root';
+    private $password = '';
+    private $conn;
 
-// Cria uma nova conexão
-$mysqli = new mysqli($host, $usuario, $senha, $database);
+    // Método para obter a conexão com o banco de dados
+    public function getConnection() {
+        $this->conn = null;
 
-// Verifica se a conexão foi bem-sucedida
-if ($mysqli->connect_errno) {
-    echo "Falha na conexão com o MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-} else {
-    echo "Conectado com sucesso ao banco de dados.";
+        try {
+            // Configura a conexão usando PDO
+            $this->conn = new PDO(
+                "mysql:host={$this->host};dbname={$this->db_name}",
+                $this->username,
+                $this->password
+            );
+
+            // Define o modo de erro do PDO para exceções
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $exception) {
+            // Caso haja um erro, exibe a mensagem
+            echo "Erro ao conectar: " . $exception->getMessage();
+        }
+
+        return $this->conn;
+    }
 }
 
-// Fecha a conexão quando terminar
-$mysqli->close();
 ?>
